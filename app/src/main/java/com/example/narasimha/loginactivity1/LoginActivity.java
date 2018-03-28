@@ -19,10 +19,9 @@ import es.dmoral.toasty.Toasty;
 
 public class LoginActivity extends AppCompatActivity {
      ActivityLoginBinding activityLoginBinding;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-         final SharedPreferences sharedPreferences;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -31,9 +30,6 @@ public class LoginActivity extends AppCompatActivity {
         if (actionBar != null) {
             getSupportActionBar().setTitle(R.string.title_login);
         }
-        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        //StrictMode.setThreadPolicy(policy);
-//will check for login state, if login state found as true, go to AMain Activity else load login screen
         sharedPreferences = getSharedPreferences("MYAPP", MODE_PRIVATE);
         boolean loginStatus = sharedPreferences.getBoolean("isLoggedIn", false);
         if (loginStatus) {

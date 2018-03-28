@@ -19,15 +19,10 @@ public class HomeDataAdapter extends RecyclerView.Adapter<HomeDataAdapter.Weathe
     public HomeDataAdapter(ArrayList<Weather> weatherData) {
         this.weatherData = weatherData;
     }
-
-
     @Override
     public WeatherViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-
         //structure creation
-
         View view = layoutInflater.inflate(R.layout.item_home_weather, parent, false);
         return new WeatherViewHolder(view);
     }
@@ -36,28 +31,17 @@ public class HomeDataAdapter extends RecyclerView.Adapter<HomeDataAdapter.Weathe
         //content binding
         Weather currentWeather = weatherData.get(position);
         holder.weatherPlace.setText(currentWeather.city);
-
         holder.weatherTemp.setText(currentWeather.temp);
     }
-
-
     @Override
     public int getItemCount() {
-
         return weatherData.size();
     }
-
-
     public class WeatherViewHolder extends RecyclerView.ViewHolder{
-
         TextView weatherPlace, weatherTemp;
-
         public WeatherViewHolder(View itemView) {
-
             super(itemView);
-
             weatherPlace = itemView.findViewById(R.id.weather_place);
-
             weatherTemp = itemView.findViewById(R.id.weather_temp);
         }
     }

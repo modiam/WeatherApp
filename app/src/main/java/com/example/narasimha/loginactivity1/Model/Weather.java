@@ -6,18 +6,11 @@ package com.example.narasimha.loginactivity1.Model;
 
 public class Weather {
     public String city;
-
     public String temp;
-
     public String units;
-
-
     public Weather(String city, String temp, String units) {
-
         this.city = city;
-
         this.temp = temp;
-
         this.units = units;
 
     }

@@ -7,25 +7,23 @@
     <ImageView android:layout_height="50dp"
         android:layout_width="50dp"
         android:layout_margin="10dp"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:src="@mipmap/ic_launcher_round"
         android:id="@+id/weather-icon"/>
 
     <TextView android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_centerVertical="true"
         android:id="@+id/weather_place"
-        android:padding="10dp" android:textSize="20sp"
-        android:layout_toEndOf="@id/weather-icon"
+        android:padding="10dp"
+        android:textSize="20sp"
         android:layout_toRightOf="@id/weather-icon"/>
 
     <TextView android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_centerVertical="true"
         android:id="@+id/weather_temp"
         android:padding="10dp"
         android:textSize="20sp"
-        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/weather_place"
         android:layout_alignParentRight="true"/>
 
 
