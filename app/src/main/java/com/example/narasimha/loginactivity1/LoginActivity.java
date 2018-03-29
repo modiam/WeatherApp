@@ -21,10 +21,8 @@ public class LoginActivity extends AppCompatActivity {
      ActivityLoginBinding activityLoginBinding;
     private SharedPreferences sharedPreferences;
     @Override
-    protected void onCreate(Bundle savedInstanceState){
-         final SharedPreferences sharedPreferences;
+    protected void onCreate(Bundle savedInstanceState) {
 
->>>>>> master
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.d("LoginActivity", "onCreate");
